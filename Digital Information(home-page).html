@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digital Information — Home Page</title>
+    <style>
+        body {
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#f5f5f5;
+            color:#222;
+        }
+
+        header {
+            height: 70vh;
+            background: linear-gradient(135deg, #4a72ff, #2bc6ff);
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            padding:0 10%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        section {
+            padding:60px 10%;
+            background:white;
+            margin-bottom:20px;
+            border-radius:12px;
+        }
+
+        h2 {
+            font-size:2rem;
+            margin-bottom:15px;
+        }
+
+        h3 {
+            margin-top:20px;
+        }
+
+        .info {
+            line-height:1.6;
+            font-size:1rem;
+        }
+
+        .card-container {
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:20px;
+            margin-top:20px;
+        }
+
+        .card {
+            background:#f1f1f1;
+            padding:18px;
+            border-radius:8px;
+        }
+
+        footer {
+            background:#111;
+            color:#ddd;
+            text-align:center;
+            padding:25px;
+            margin-top:30px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>Understanding Digital Information</h1>
+        <p>How images, audio, data and packets are represented, transmitted, and protected.</p>
+    </div>
+</header>
+
+
+<!-- RESOLUTION -->
+<section>
+    <h2>1. Visual Resolution</h2>
+    <div class="info">
+
+        <p>
+            Resolution refers to how many pixels are used to form a digital image or displayed
+            on a screen. More pixels means more visual information and a sharper picture.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Pixel Count</h3>
+                 <img src="pixel-imaage.png" alt="Image" width="300" height="300">
+
+                <p>
+                    Resolution is expressed horizontally and vertically.
+                    Higher values → more detail.
+                </p>
+            </div>
+            <div class="card">
+                <h3>PPI — Pixels Per Inch</h3>
+                <img src="PPI.png" alt="Image" width="300" height="300">
+
+                <p>
+                    Density of pixels on a display. A smaller screen with the same resolution
+                    is sharper because it has higher PPI.
+                </p>
+            </div>
+            <div class="card">
+                <h3>DPI — Printing</h3>
+                <img src="DPI.png" alt="Image" width="250" height="250">
+
+                <p>
+                    Printers use dots per inch. Higher DPI produces sharper printed output,
+                    especially for photographs.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- AUDIO -->
+<section>
+    <h2>2. Audio Representation</h2>
+    <div class="info">
+
+        <p>
+            Audio signals are transformed into digital data by measuring the wave and capturing
+            values at regular intervals.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Sampling Rate (Hz)</h3>
+                <img src="sampling-rate.png" alt="Image" width="250" height="250">
+
+                <p>
+                    Number of samples taken per second. A standard audio CD uses 44.1 kHz:
+                    44,100 samples every second.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Bit Depth</h3>
+                <img src="bit-depth.jpeg" alt="Image" width="250" height="250">
+
+                <p>
+                    Defines how many bits are used per sample. Higher bit depth gives better
+                    audio quality and less noise.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Waveform</h3>
+                <img src="waveform.jpg" alt="Image" width="250" height="250">
+
+                <p>
+                    Visual representation of sound amplitude over time — used to store and edit audio.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- QUANTIZATION -->
+<section>
+    <h2>3. Quantization & Coding</h2>
+    <div class="info">
+        <p>
+            To convert analog information into digital form, continuous values must be rounded
+            and encoded into bits.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Analog → Digital</h3>
+                <img src="analog-digital.jpg" alt="Image" width="250" height="250">
+
+                <p>
+                    Real world signals are continuous. Digital systems store them as discrete values.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Quantization</h3>
+                <img src="quantization.jpg" alt="Image" width="250" height="250">
+
+                <p>
+                    Values are approximated to the nearest level available. More levels =
+                    higher quality.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Encoding</h3>
+                <p>
+                    Digital values are stored as binary information so they can be transmitted,
+                    processed or compressed.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- DATA TRANSMISSION -->
+<section>
+    <h2>4. Data Transmission & Packets</h2>
+    <div class="info">
+        <p>
+            Data sent across networks is divided into small packets. Each packet travels independently
+            and is reassembled at the destination.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Header</h3>
+                <p>
+                    Contains source IP, destination IP, packet size, and sequence number to rebuild data.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Payload</h3>
+                <p>
+                    The actual data being transmitted — image fragment, text, audio, etc.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Trailer & CRC</h3>
+                <p>
+                    Identifies the end of the packet and checks for transmission errors (Cyclic Redundancy Check).
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- SECURITY -->
+<section>
+    <h2>5. Security & Data Integrity</h2>
+    <div class="info">
+        <p>
+            Many techniques ensure that digital information arrives safely and remains unchanged.
+        </p>
+
+        <div class="card-container">
+            <div class="card">
+                <h3>Parity & Checksum</h3>
+                <p>
+                    Extra bits or sums used to detect errors in data transmission.
+                </p>
+            </div>
+            <div class="card">
+                <h3>ARQ</h3>
+                <p>
+                    Automatic Repeat Request: packets are resent when errors are detected.
+                </p>
+            </div>
+            <div class="card">
+                <h3>Encryption</h3>
+                <p>
+                    Symmetric or asymmetric keys protect digital information from unauthorized access.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    © 2025 — Digital Information Learning
+</footer>
+
+</body>
+</html>
